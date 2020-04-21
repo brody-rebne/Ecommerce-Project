@@ -12,5 +12,19 @@ namespace ECommerceLabWebApp.Controllers
         {
             return View();
         }
+
+/*        [HttpGet]
+        [Route("/Account/Register")]
+        public IActionResult Register()
+        {
+            return RedirectToPage("Register");
+        }
+
+        [HttpGet]
+        [Route("/Account/Login")]
+        public IActionResult Login()
+        {
+            return RedirectToPage("Login");
+        }*/
     }
 }
