@@ -9,12 +9,12 @@
 <form method="post">
     <div asp-validation-summary="All"></div>
 
-    <label asp-for="LoginData.Email">Email</label>
+    <label asp-for="LoginData.Email ">Email</label>
     <input asp-for="LoginData.Email" />
     <span asp-validation-for="LoginData.Email"></span>
 
     <label asp-for="LoginData.Password">Password</label>
-    <input asp-for="LoginData.Password" />
+    <input type="password" asp-for="LoginData.Password" />
     <span asp-validation-for="LoginData.Password"></span>
 
     <button type="submit">Log In</button>

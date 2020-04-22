@@ -1,7 +1,7 @@
 ﻿@page
 @model ECommerceLabWebApp.Pages.Account.RegisterModel
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Sign Up";
 }
 
 <h1>Register</h1>
@@ -26,14 +26,13 @@
     <span asp-validation-for="RegisterData.Birthday"></span>
 
     <label asp-for="RegisterData.Password">Create a Password</label>
-    <input asp-for="RegisterData.Password" />
+    <input type="password" asp-for="RegisterData.Password" />
     <span asp-validation-for="RegisterData.Password"></span>
 
     <label asp-for="RegisterData.ConfirmPassword">Confirm Password</label>
-    <input asp-for="RegisterData.ConfirmPassword" />
+    <input type="password" asp-for="RegisterData.ConfirmPassword" />
     <span asp-validation-for="RegisterData.ConfirmPassword"></span>
 
     <button type="submit">Register</button>
-
 </form>
 
