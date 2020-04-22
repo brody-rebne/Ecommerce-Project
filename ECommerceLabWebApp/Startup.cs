@@ -37,7 +37,7 @@ namespace ECommerceLabWebApp
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("IdentityDefault"));
+                options.UseSqlServer(Configuration.GetConnectionString("UserConnection"));
             });
 
             services.AddDbContext<StoreDbContext>(options =>
