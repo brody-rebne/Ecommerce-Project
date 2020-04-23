@@ -1,4 +1,6 @@
-﻿@{ 
+﻿@model IEnumerable<ECommerceLabWebApp.Models.Product>
+
+@{ 
     Layout = "_Layout";
 }
 
@@ -8,6 +10,21 @@
 </head>
 
 <body>
-    <h1>UNKNOWN ENTERPRISES, LLC</h1>
-    <h2>Welcome to our app. It's the best app. You've never seen a better app.</h2>
+    <h1>Snackmeister Limited</h1>
+    <h2>Welcome to our app. We sell the best snacks. You've never had a better snack.</h2>
+
+    @*<section class="row justify-content-center">
+        <h2 class="text-center">Our Products</h2>
+        @foreach (var product in Model)
+        {
+            <article class="col-lg-6 p-3">
+                <div>
+                    <h3 class="text-center">@product.Name</h3>
+                    <h4>@product.Description</h4>
+                    <h4>@product.Price</h4>
+                </div>
+            </article>
+        }
+
+    </section>*@
 </body>

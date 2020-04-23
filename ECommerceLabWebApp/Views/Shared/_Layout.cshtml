@@ -10,24 +10,41 @@
 <head>
     @{ /* what is a viewbag? */}
     <title>Whats a ViewBag?</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav>
-    @if (SignInManager.IsSignedIn(User))
-    {
-        <span>Welcome, @User.Claims.First(x => x.Type == "FullName").Value!</span>
-        <form asp-page="/Account/Logout"> <button type="submit">Sign Out</button> </form>
-    }
-    else
-    {
-        <a asp-page="/Account/Login">Sign In</a>
-
-        <a asp-page="/Account/Register">Sign Up</a>
-    }
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li class="nav-item">
+                        <span>Welcome, @User.Claims.First(x => x.Type == "FullName").Value!</span>
+                    </li>
+                    <li class="nav-item">
+                        <form asp-page="/Account/Logout"> <button type="submit" class="btn btn-danger">Sign Out</button> </form>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Account/Login">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Account/Register">Sign Up</a>
+                    </li>
+                }
+            </ul>
+        </div>
     </nav>
     <div>
-    @RenderBody()
+        @RenderBody()
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
