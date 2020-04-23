@@ -50,6 +50,24 @@ namespace ECommerceLabWebApp.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    //create custom claims for the user
+                    Claim name = new Claim("FullName", $"{user.FirstName} {user.LastName}");
+
+                    //reconstructing the date from otherwise perfectly fine user input 🙄
+                    Claim birthday = new Claim(ClaimTypes.DateOfBirth, new DateTime(user.Birthdate.Year, user.Birthdate.Month, user.Birthdate.Day).ToString("u"), ClaimValueTypes.DateTime);
+
+                    //just regular, well-behaved email
+                    Claim email = new Claim(ClaimTypes.Email, user.Email, ClaimValueTypes.Email);
+
+                    //list of all claims, to add them all at once
+                    List<Claim> claims = new List<Claim>()
+                    {
+                        name, birthday, email
+                    };
+
+                    //add all claims at once to the user
+                    await _userManager.AddClaimsAsync(user, claims);
+
                     //sign the user in.
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Home");
