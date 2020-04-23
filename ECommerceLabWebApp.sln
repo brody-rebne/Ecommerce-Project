@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceLabWebApp", "ECommerceLabWebApp\ECommerceLabWebApp.csproj", "{472E9AEE-07F3-403F-A578-C7943B7ABB69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceLabWebAppTests", "ECommerceLabWebAppTests\ECommerceLabWebAppTests.csproj", "{8AFD3B14-D6C3-4871-B505-91C03117AA2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceLabWebAppTests", "ECommerceLabWebAppTests\ECommerceLabWebAppTests.csproj", "{8AFD3B14-D6C3-4871-B505-91C03117AA2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ECommerceLabWebApp.Models
+
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Whats a ViewBag?</title>
+</head>
+
+<body>
+    <nav>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        //add user's name here once claim is created for it
+        <span>Welcome, friendly user!</span>
+        <form asp-page="/Account/Logout"> <button type="submit">Sign Out</button> </form>
+    }
+    else
+    {
+        <a asp-page="/Account/Login">Sign In</a>
+
+        <a asp-page="/Account/Register">Sign Up</a>
+    }
+    </nav>
+    <div>
+    @RenderBody()
+    </div>
+</body>
+</html>

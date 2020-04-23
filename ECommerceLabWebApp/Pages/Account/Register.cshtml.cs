@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using ECommerceLabWebApp.Models;
 using Microsoft.AspNetCore.Identity;
@@ -28,7 +29,6 @@ namespace ECommerceLabWebApp.Pages.Account
 
         public void OnGet()
         {
-            
         }
 
         public async Task<IActionResult> OnPost()
