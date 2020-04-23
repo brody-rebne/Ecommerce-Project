@@ -16,8 +16,7 @@
     <nav>
     @if (SignInManager.IsSignedIn(User))
     {
-        //add user's name here once claim is created for it
-        <span>Welcome, friendly user!</span>
+        <span>Welcome, @User.Claims.First(x => x.Type == "FullName").Value!</span>
         <form asp-page="/Account/Logout"> <button type="submit">Sign Out</button> </form>
     }
     else
