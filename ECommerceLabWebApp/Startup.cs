@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ECommerceLabWebApp.Data;
 using ECommerceLabWebApp.Models;
+using ECommerceLabWebApp.Models.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -34,6 +35,8 @@ namespace ECommerceLabWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddTransient<IInventory, InventoryService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
