@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ECommerceLabWebApp.Models
 {
-    interface IInventory
+    public interface IInventory
     {
         //Create
         Task<Product> CreateProductAsync(Product product);

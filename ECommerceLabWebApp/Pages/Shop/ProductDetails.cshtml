@@ -1,0 +1,38 @@
+﻿@page "{id:int?}"
+@model ECommerceLabWebApp.Pages.Shop.ProductDetailsModel
+@{
+    ViewData["Title"] = "ProductDetails";
+}
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snackmeister - Product Details</title>
+</head>
+<body>
+    <section>
+        @if (Model == null)
+        {
+            <h2>Product not found.</h2>
+        }
+        else
+        {
+            <h2 class="text-center">Product Details</h2>
+            <h2>Product: @Model.product.Name</h2>
+            <ul>
+                <li>ID: @Model.product.ID</li>
+                <li>Name: @Model.product.Name</li>
+                <li>Price: @Model.product.Price</li>
+                <li>Description: @Model.product.Description</li>
+                @*<li>
+                    <img="@Model.product.ImageUrl">
+                </li>*@
+            </ul>
+        }
+
+    </section>
+</body>
+</html>
