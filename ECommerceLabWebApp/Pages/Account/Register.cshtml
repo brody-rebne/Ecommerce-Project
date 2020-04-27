@@ -3,36 +3,41 @@
 @{
     ViewData["Title"] = "Sign Up";
 }
+@{
+    Layout = "_Layout";
+}
 
 <h1>Register</h1>
 
 <form method="post">
-    <div asp-validation-summary="All"></div>
-    <hr />
-    <label asp-for="RegisterData.Email">Email</label>
-    <input asp-for="RegisterData.Email" />
-    <span asp-validation-for="RegisterData.Email"></span>
-
-    <label asp-for="RegisterData.FirstName">First Name</label>
-    <input asp-for="RegisterData.FirstName" />
-    <span asp-validation-for="RegisterData.FirstName"></span>
-
-    <label asp-for="RegisterData.LastName">Last Name</label>
-    <input asp-for="RegisterData.LastName" />
-    <span asp-validation-for="RegisterData.LastName"></span>
-
-    <label asp-for="RegisterData.Birthday">Birthday</label>
-    <input asp-for="RegisterData.Birthday" />
-    <span asp-validation-for="RegisterData.Birthday"></span>
-
-    <label asp-for="RegisterData.Password">Create a Password</label>
-    <input type="password" asp-for="RegisterData.Password" />
-    <span asp-validation-for="RegisterData.Password"></span>
-
-    <label asp-for="RegisterData.ConfirmPassword">Confirm Password</label>
-    <input type="password" asp-for="RegisterData.ConfirmPassword" />
-    <span asp-validation-for="RegisterData.ConfirmPassword"></span>
-
-    <button type="submit">Register</button>
+    <section class="regform">
+        <div asp-validation-summary="All"></div>
+        <hr />
+        <label asp-for="RegisterData.Email">Email</label>
+        <input asp-for="RegisterData.Email" />
+        <span asp-validation-for="RegisterData.Email"></span>
+        <br />
+        <label asp-for="RegisterData.FirstName">First Name</label>
+        <input asp-for="RegisterData.FirstName" />
+        <span asp-validation-for="RegisterData.FirstName"></span>
+        <br />
+        <label asp-for="RegisterData.LastName">Last Name</label>
+        <input asp-for="RegisterData.LastName" />
+        <span asp-validation-for="RegisterData.LastName"></span>
+        <br />
+        <label asp-for="RegisterData.Birthday">Birthday</label>
+        <input asp-for="RegisterData.Birthday" />
+        <span asp-validation-for="RegisterData.Birthday"></span>
+        <br />
+        <label asp-for="RegisterData.Password">Create a Password</label>
+        <input type="password" asp-for="RegisterData.Password" />
+        <span asp-validation-for="RegisterData.Password"></span>
+        <br />
+        <label asp-for="RegisterData.ConfirmPassword">Confirm Password</label>
+        <input type="password" asp-for="RegisterData.ConfirmPassword" />
+        <span asp-validation-for="RegisterData.ConfirmPassword"></span>
+        <br />
+        <button type="submit">Register</button>
+    </section>
 </form>
 
