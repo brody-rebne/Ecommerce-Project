@@ -22,100 +22,100 @@ namespace ECommerceLabWebApp.Data
                 {
                     ID = 1,
                     SKU = "12345",
-                    Name = "Widget",
-                    Description = "Description of Widget",
-                    Price = 30,
-                    ImageUrl = ""
+                    Name = "Pigs Feet",
+                    Description = "Spicy Pickled Pigs Feet",
+                    Price = 2,
+                    ImageUrl = "wwwroot/img/PigFeet.jpg"
                 },
 
                 new Product
                 {
                     ID = 2,
                     SKU = "23456",
-                    Name = "Sprocket",
-                    Description = "Description of Sprocket",
-                    Price = 45,
-                    ImageUrl = ""
+                    Name = "Cheese",
+                    Description = "One package of delicous cheese",
+                    Price = 1,
+                    ImageUrl = "wwwroot/img/cheese.jpg"
                 },
 
                 new Product
                 {
                     ID = 3,
                     SKU = "34567",
-                    Name = "Thingamabob",
-                    Description = "Description of Thingamabob",
-                    Price = 15,
-                    ImageUrl = ""
+                    Name = "Eggs",
+                    Description = "Four raw eggs",
+                    Price = 5,
+                    ImageUrl = "wwwroot/img/cheese.jpg"
                 },
 
                 new Product
                 {
                     ID = 4,
                     SKU = "45678",
-                    Name = "Gizmo",
-                    Description = "Description of Gizmo",
-                    Price = 200,
-                    ImageUrl = ""
+                    Name = "Chips",
+                    Description = "Small bag of Chicken and Waffles chips",
+                    Price = 3,
+                    ImageUrl = "wwwroot/img/Chips.jpg"
                 },
 
                 new Product
                 {
                     ID = 5,
                     SKU = "56789",
-                    Name = "Gadget",
-                    Description = "Description of Gadget",
-                    Price = 70,
-                    ImageUrl = ""
+                    Name = "Jerky",
+                    Description = "One medium sized bag of jerky",
+                    Price = 7,
+                    ImageUrl = "wwwroot/img/Jerky.jpg"
                 },
 
                 new Product
                 {
                     ID = 6,
                     SKU = "67890",
-                    Name = "Device",
-                    Description = "Description of Device",
-                    Price = 90,
-                    ImageUrl = ""
+                    Name = "Lutefisk",
+                    Description = "One can of delicous Lutefisk",
+                    Price = 8,
+                    ImageUrl = "wwwroot/img/Lutefisk.jpg"
                 },
 
                 new Product
                 {
                     ID = 7,
                     SKU = "78901",
-                    Name = "Doohickey",
-                    Description = "Description of Doohickey",
+                    Name = "Catepillars",
+                    Description = "High in protein",
                     Price = 5,
-                    ImageUrl = ""
+                    ImageUrl = "wwwroot/img/Caterpillar.jpg"
                 },
 
                 new Product
                 {
                     ID = 8,
                     SKU = "89012",
-                    Name = "Rube Goldberg Machine",
-                    Description = "Description of Rube Goldberg Machine",
-                    Price = 42,
-                    ImageUrl = ""
+                    Name = "Pork Rinds",
+                    Description = "One bag of microwavable Pork Rinds",
+                    Price = 3,
+                    ImageUrl = "wwwroot/img/PorkRindsjpg"
                 },
 
                 new Product
                 {
                     ID = 9,
                     SKU = "90123",
-                    Name = "Contraption",
-                    Description = "Description of Contraption",
-                    Price = 100,
-                    ImageUrl = ""
+                    Name = "Vienna Sausage",
+                    Description = "America's Favorite!",
+                    Price = 1,
+                    ImageUrl = "wwwroot/img/ViennaSausage.jpg"
                 },
 
                 new Product
                 {
                     ID = 10,
                     SKU = "01234",
-                    Name = "Whatchamacallit",
-                    Description = "Description of Whatchamacallit",
-                    Price = 0,
-                    ImageUrl = ""
+                    Name = "Beans",
+                    Description = "One can of beans",
+                    Price = 1,
+                    ImageUrl = "wwwroot/img/beans.jpg"
                 }
             );
         }

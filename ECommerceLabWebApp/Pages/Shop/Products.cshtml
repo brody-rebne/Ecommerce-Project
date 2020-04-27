@@ -7,16 +7,21 @@
     Layout = "_Layout";
 }
 
-<body>
-    <h2>Products Currently In Stock</h2>
-    @foreach(var product in Model.Products)
-    {
-        <div>
-            <img src="@product.ImageUrl" />
-            <h3>@product.Name</h3>
-            <p>@product.Description</p>
-            <p><s>$@(product.Price + 10)</s> $@product.Price!</p>
-            <a asp-page="ProductDetails" asp-route-id="@product.ID">Details</a>
-        </div>
-    }
-</body>
+    <body>
+        <section class="row justify-content-center">
+            <h2 class="col-lg-12 p-10">Products Currently In Stock</h2>
+            <br />
+            @foreach (var product in Model.Products)
+            {
+                <article class="col-lg-3">
+                    <div>
+                        <img src="@product.ImageUrl" />
+                        <h3>@product.Name</h3>
+                        <p>@product.Description</p>
+                        <p><s>$@(product.Price + 10)</s> $@product.Price!</p>
+                        <a asp-page="ProductDetails" asp-route-id="@product.ID">Details</a>
+                    </div>
+                </article>
+            }
+        </section>
+    </body>
