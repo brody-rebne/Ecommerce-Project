@@ -1,0 +1,22 @@
+﻿@page
+@model ECommerceLabWebApp.Pages.ProductsModel
+@{
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<body>
+    <h2>Products Currently In Stock</h2>
+    @foreach(var product in Model.Products)
+    {
+        <div>
+            <img src="@product.ImageUrl" />
+            <h3>@product.Name</h3>
+            <p>@product.Description</p>
+            <p><s>$@(product.Price + 10)</s> $@product.Price!</p>
+            <a asp-page="Shop/ProductDetails/@product.ID">Details</a>
+        </div>
+    }
+</body>
