@@ -16,7 +16,7 @@
             <h3>@product.Name</h3>
             <p>@product.Description</p>
             <p><s>$@(product.Price + 10)</s> $@product.Price!</p>
-            <a asp-page="Shop/ProductDetails/@product.ID">Details</a>
+            <a asp-page="ProductDetails" asp-route-id="@product.ID">Details</a>
         </div>
     }
 </body>

@@ -16,8 +16,6 @@ namespace ECommerceLabWebApp.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>().ToTable("Products");
-
             modelBuilder.Entity<Product>().HasData(
 
                 new Product
@@ -36,7 +34,7 @@ namespace ECommerceLabWebApp.Data
                     SKU = "23456",
                     Name = "Sprocket",
                     Description = "Description of Sprocket",
-                    Price = 40,
+                    Price = 45,
                     ImageUrl = ""
                 },
 
