@@ -12,6 +12,8 @@ namespace ECommerceLabWebApp.Pages.Account
 {
     public class LoginModel : PageModel
     {
+        //dependency injection
+
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
 
@@ -24,11 +26,18 @@ namespace ECommerceLabWebApp.Pages.Account
             _signInManager = signIn;
         }
 
-
+        /// <summary>
+        /// Action on page load
+        /// </summary>
         public void OnGet()
         {
         }
 
+        /// <summary>
+        /// Performs user login via GET request.
+        /// </summary>
+        /// <param name="returnUrl">URL path to redirect to on successful login. If no value is given will redirect to homepage.</param>
+        /// <returns>Redirect to given url if login succeeds, redirect to lockout page if user is locked out, refresh of page if login or form data is invalid</returns>
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             //sets a url to return to on success
@@ -63,6 +72,9 @@ namespace ECommerceLabWebApp.Pages.Account
             return Page();
         }
 
+        /// <summary>
+        /// Login input class for use in hashed identity database
+        /// </summary>
         public class LoginInput
         {
             [Required]

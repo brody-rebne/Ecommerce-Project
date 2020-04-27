@@ -12,6 +12,9 @@ namespace ECommerceLabWebAppTests
 {
     public class UnitTest1
     {
+        /// <summary>
+        /// A new product object can be created
+        /// </summary>
         [Fact]
         public void CanCreateProduct()
         {
@@ -20,6 +23,9 @@ namespace ECommerceLabWebAppTests
             Assert.IsType<Product>(testProd);
         }
 
+        /// <summary>
+        /// A product object's properties are properly structured
+        /// </summary>
         [Fact]
         public void CanPopulateProductData()
         {
@@ -41,6 +47,10 @@ namespace ECommerceLabWebAppTests
             Assert.Equal("testUrl", testP.ImageUrl);
         }
 
+        /// <summary>
+        /// A product object can be successfully sent to a Store database
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public async Task CanAddProductToDb()
         {

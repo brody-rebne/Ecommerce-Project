@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace ECommerceLabWebApp.Data
 {
+    /// <summary>
+    /// Database context for database of products and other store data
+    /// </summary>
     public class StoreDbContext : DbContext
     {
         public StoreDbContext(DbContextOptions<StoreDbContext> options) : base(options)
@@ -14,8 +17,13 @@ namespace ECommerceLabWebApp.Data
 
         }
 
+        /// <summary>
+        /// Actions performed upon database model creation
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //seeding our data
             modelBuilder.Entity<Product>().HasData(
 
                 new Product

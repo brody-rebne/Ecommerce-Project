@@ -8,23 +8,13 @@ namespace ECommerceLabWebApp.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// Return index view on GET request
+        /// </summary>
+        /// <returns>Index.html found in Views folder</returns>
         public IActionResult Index()
         {
             return View();
         }
-
-/*        [HttpGet]
-        [Route("/Account/Register")]
-        public IActionResult Register()
-        {
-            return RedirectToPage("Register");
-        }
-
-        [HttpGet]
-        [Route("/Account/Login")]
-        public IActionResult Login()
-        {
-            return RedirectToPage("Login");
-        }*/
     }
 }

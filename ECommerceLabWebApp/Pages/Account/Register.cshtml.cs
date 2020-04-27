@@ -26,11 +26,17 @@ namespace ECommerceLabWebApp.Pages.Account
             _signInManager = signIn;
         }
 
-
+        /// <summary>
+        /// Action on page load
+        /// </summary>
         public void OnGet()
         {
         }
 
+        /// <summary>
+        /// Creates new user identity from form data
+        /// </summary>
+        /// <returns>Redirect to home page if successful, refresh if form data is invalid</returns>
         public async Task<IActionResult> OnPost()
         {
             if (ModelState.IsValid)
@@ -80,6 +86,7 @@ namespace ECommerceLabWebApp.Pages.Account
                 }
             }
 
+            //return if form data is invalid
             return Page();
         }
 

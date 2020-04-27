@@ -18,10 +18,17 @@ namespace ECommerceLabWebApp.Pages.Account
             _signInManager = signInManager;
         }
 
+        /// <summary>
+        /// Action on page load
+        /// </summary>
         public void OnGet()
         {
         }
 
+        /// <summary>
+        /// Performs user logout via GET request
+        /// </summary>
+        /// <returns>Redirect to homepage</returns>
         public async Task<IActionResult> OnPost()
         {
             await _signInManager.SignOutAsync();

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ECommerceLabWebApp.Models
 {
+    /// <summary>
+    /// App user made for registration/claim capturing purposes
+    /// </summary>
     public class ApplicationUser : IdentityUser
     {
         public string FirstName { get; set; }

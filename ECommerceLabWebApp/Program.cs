@@ -16,6 +16,11 @@ namespace ECommerceLabWebApp
             CreateHostBuilder(args).Build().Run();
         }
 
+        /// <summary>
+        /// Creating our web host
+        /// </summary>
+        /// <param name="args">Arguments passed in via Main()</param>
+        /// <returns>The web host</returns>
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
