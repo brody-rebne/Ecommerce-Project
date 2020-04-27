@@ -23,6 +23,9 @@ namespace ECommerceLabWebApp.Data
         /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //adding composite key for CartItems table.
+            modelBuilder.Entity<CartItems>().HasKey(x => new { x.CartID, x.ProductID });
+
             //seeding our data
             modelBuilder.Entity<Product>().HasData(
 
@@ -129,5 +132,7 @@ namespace ECommerceLabWebApp.Data
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Cart> Cart { get; set; }
+        public DbSet<CartItems> CartItems { get; set; }
     }
 }
