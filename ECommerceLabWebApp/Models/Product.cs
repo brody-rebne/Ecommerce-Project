@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace ECommerceLabWebApp.Models
 {
+    /// <summary>
+    /// Product built for store database. Do not create without ID.
+    /// </summary>
     public class Product
     {
         public int ID { get; set; }

@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace ECommerceLabWebApp.Models
 {
+    /// <summary>
+    /// Inventory management service containing CRUD functionality for products
+    /// </summary>
     public interface IInventory
     {
         //Create
