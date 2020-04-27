@@ -119,7 +119,7 @@ namespace ECommerceLabWebApp.Data
                 new Product
                 {
                     ID = 10,
-                    SKU = "01234",
+                    SKU = "01235",
                     Name = "Beans",
                     Description = "One can of beans",
                     Price = 1,
