@@ -1,15 +1,15 @@
-﻿using ECommerceLabWebApp.Data;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using ECommerceLabWebApp.Data;
+using ECommerceLabWebApp.Models.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace ECommerceLabWebApp.Models.Services
 {
     public class InventoryService : IInventory
     {
-
         //dependency injection for database context
         private StoreDbContext _context;
 

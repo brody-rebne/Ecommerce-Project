@@ -1,0 +1,21 @@
+﻿@page
+@model ECommerceLabWebApp.Pages.Shop.IndexModel
+@{
+}
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snackmeister - Cart</title>
+</head>
+<body>
+    <section>
+        @await Component.InvokeAsync("Cart");
+
+        <a asp-page="Shop/Checkout">Checkout</a>
+    </section>
+</body>
+</html>

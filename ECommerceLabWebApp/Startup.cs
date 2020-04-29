@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ECommerceLabWebApp.Data;
 using ECommerceLabWebApp.Models;
 using ECommerceLabWebApp.Models.Services;
+using ECommerceLabWebApp.Models.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -39,6 +40,10 @@ namespace ECommerceLabWebApp
 
             services.AddTransient<IInventory, InventoryService>();
 
+            services.AddTransient<ICartItems, CartItemsService>();
+
+            services.AddTransient<ICart, CartService>();
+            
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:UserConnection"]);

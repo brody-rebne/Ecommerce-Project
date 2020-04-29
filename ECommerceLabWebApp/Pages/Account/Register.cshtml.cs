@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using ECommerceLabWebApp.Models;
+using ECommerceLabWebApp.Models.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -16,14 +17,16 @@ namespace ECommerceLabWebApp.Pages.Account
     {
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
+        private ICart _cart;
 
         [BindProperty]
         public RegisterInput RegisterData { get; set; }
 
-        public RegisterModel(UserManager<ApplicationUser> usermanager, SignInManager<ApplicationUser> signIn)
+        public RegisterModel(UserManager<ApplicationUser> usermanager, SignInManager<ApplicationUser> signIn, ICart cart)
         {
             _userManager = usermanager;
             _signInManager = signIn;
+            _cart = cart;
         }
 
         /// <summary>
@@ -73,6 +76,14 @@ namespace ECommerceLabWebApp.Pages.Account
 
                     //add all claims at once to the user
                     await _userManager.AddClaimsAsync(user, claims);
+
+                    //creating a cart for the user, keyed off of their email
+                    Cart userCart = new Cart()
+                    {
+                        Owner = user.UserName
+                    };
+
+                    await _cart.CreateCart(userCart);
 
                     //sign the user in.
                     await _signInManager.SignInAsync(user, isPersistent: false);

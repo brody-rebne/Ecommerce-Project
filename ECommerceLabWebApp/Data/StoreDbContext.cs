@@ -46,7 +46,7 @@ namespace ECommerceLabWebApp.Data
                     Name = "Cheese",
                     Description = "One package of delicous cheese",
                     Price = 1,
-                    ImageUrl = "img/cheese.jpg"
+                    ImageUrl = "/img/cheese.jpg"
                 },
 
                 new Product
@@ -56,7 +56,7 @@ namespace ECommerceLabWebApp.Data
                     Name = "Eggs",
                     Description = "Four raw eggs",
                     Price = 5,
-                    ImageUrl = "img/cheese.jpg"
+                    ImageUrl = "/img/cheese.jpg"
                 },
 
                 new Product
@@ -66,7 +66,7 @@ namespace ECommerceLabWebApp.Data
                     Name = "Chips",
                     Description = "Small bag of Chicken and Waffles chips",
                     Price = 3,
-                    ImageUrl = "img/Chips.jpg"
+                    ImageUrl = "/img/Chips.jpg"
                 },
 
                 new Product
@@ -76,7 +76,7 @@ namespace ECommerceLabWebApp.Data
                     Name = "Jerky",
                     Description = "One medium sized bag of jerky",
                     Price = 7,
-                    ImageUrl = "img/Jerky.jpg"
+                    ImageUrl = "/img/Jerky.jpg"
                 },
 
                 new Product
@@ -86,7 +86,7 @@ namespace ECommerceLabWebApp.Data
                     Name = "Lutefisk",
                     Description = "One can of delicous Lutefisk",
                     Price = 8,
-                    ImageUrl = "img/Lutefisk.jpg"
+                    ImageUrl = "/img/Lutefisk.jpg"
                 },
 
                 new Product
@@ -96,7 +96,7 @@ namespace ECommerceLabWebApp.Data
                     Name = "Catepillars",
                     Description = "High in protein",
                     Price = 5,
-                    ImageUrl = "img/Caterpillar.jpg"
+                    ImageUrl = "/img/Caterpillar.jpg"
                 },
 
                 new Product
@@ -106,7 +106,7 @@ namespace ECommerceLabWebApp.Data
                     Name = "Pork Rinds",
                     Description = "One bag of microwavable Pork Rinds",
                     Price = 3,
-                    ImageUrl = "img/PorkRindsjpg"
+                    ImageUrl = "/img/PorkRindsjpg"
                 },
 
                 new Product
@@ -116,7 +116,7 @@ namespace ECommerceLabWebApp.Data
                     Name = "Vienna Sausage",
                     Description = "America's Favorite!",
                     Price = 1,
-                    ImageUrl = "img/ViennaSausage.jpg"
+                    ImageUrl = "/img/ViennaSausage.jpg"
                 },
 
                 new Product
@@ -126,7 +126,7 @@ namespace ECommerceLabWebApp.Data
                     Name = "Beans",
                     Description = "One can of beans",
                     Price = 1,
-                    ImageUrl = "img/beans.jpg"
+                    ImageUrl = "/img/beans.jpg"
                 }
             );
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ECommerceLabWebApp.Models
+namespace ECommerceLabWebApp.Models.Interfaces
 {
     /// <summary>
     /// Inventory management service containing CRUD functionality for products

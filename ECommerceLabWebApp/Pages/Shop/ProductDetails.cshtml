@@ -1,11 +1,18 @@
 ﻿@page "{id:int?}"
 @model ECommerceLabWebApp.Pages.Shop.ProductDetailsModel
+
+@using Microsoft.AspNetCore.Identity
+@using ECommerceLabWebApp.Models
+
 @{
     ViewData["Title"] = "ProductDetails";
 }
 @{
     Layout = "_Layout";
 }
+
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
 
 <!DOCTYPE html>
 <html>
@@ -28,11 +35,21 @@
                 <li>Price: @Model.product.Price</li>
                 <li>Description: @Model.product.Description</li>
                 @*<li>
-                    <img="@Model.product.ImageUrl">
-                </li>*@
+                        <img="@Model.product.ImageUrl">
+                    </li>*@
             </ul>
-        }
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <form action="add" method="post">
+                    <label asp-for="AddData.Qty">Quantity</label>
+                    <input asp-for="AddData.Qty" type="number" placeholder="1" />
 
+                    <input asp-for="AddData.ProductID" type="hidden" value="@Model.product.ID" />
+
+                    <button class="btn" type="submit">Add to Cart</button>
+                </form>
+            }
+        }
     </section>
 </body>
 </html>

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<ECommerceLabWebApp.Models.CartItems>
+
+<h2>Your Cart</h2>
+
+@foreach(var cartItems in Model)
+{
+    <img src="@cartItems.Product.ImageUrl" />
+    <h3>@cartItems.Product.Name</h3>
+    <p>@cartItems.Product.Price </p>
+    <p>@cartItems.Qty</p>
+}
