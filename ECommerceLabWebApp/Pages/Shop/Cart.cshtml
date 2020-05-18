@@ -1,5 +1,5 @@
 ﻿@page
-@model ECommerceLabWebApp.Pages.Shop.IndexModel
+@model ECommerceLabWebApp.Pages.Shop.CartModel
 @{
 }
 @{
@@ -12,7 +12,33 @@
     <title>Snackmeister - Cart</title>
 </head>
 <body>
+    <h2>Your Cart</h2>
     <section>
+        @foreach(var item in Model.Items)
+        {
+            <article>
+                <div>
+                    <h3>@item.Product.Name</h3>
+                    <p>@item.Product.Name</p>
+                    <p>@item.Product.Price</p>
+                </div>
+
+                <form method="put">
+                    <input asp-for="UpdateData.Qty" type="number">
+
+                    <input asp-for="UpdateData.ProductID" type="hidden" value="@item.ProductID" />
+
+                    <button type="submit">Update</button>
+                </form>
+
+                <form method="delete">
+                    <input asp-for="RemoveData.ProductID" />
+
+                    <button type="submit">Remove</button>
+                </form>
+            </article>
+        }
+
         @await Component.InvokeAsync("Cart");
 
         <a asp-page="Shop/Checkout">Checkout</a>

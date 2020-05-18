@@ -51,7 +51,9 @@ namespace ECommerceLabWebApp.Models.Services
         public async Task<Cart> GetCartByOwner(string username)
         {
             var currentUser = await _userManager.FindByNameAsync(username);
-            return await _context.Cart.FirstOrDefaultAsync(x => x.Owner == currentUser.Id);
+            Cart cart = await _context.Cart.FirstOrDefaultAsync(x => x.Owner == currentUser.UserName);
+
+            return cart;
         }
 
         /// <summary>
@@ -63,7 +65,7 @@ namespace ECommerceLabWebApp.Models.Services
         public async Task<int> GetCartIdByOwner(string username)
         {
             var currentUser = await _userManager.FindByNameAsync(username);
-            var cart = await _context.Cart.FirstOrDefaultAsync(x => x.Owner == currentUser.Id);
+            Cart cart = await _context.Cart.FirstOrDefaultAsync(x => x.Owner == currentUser.UserName);
 
             return cart.ID;
         }

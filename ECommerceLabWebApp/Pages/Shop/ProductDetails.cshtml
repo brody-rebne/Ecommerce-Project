@@ -34,15 +34,15 @@
                 <li>Name: @Model.product.Name</li>
                 <li>Price: @Model.product.Price</li>
                 <li>Description: @Model.product.Description</li>
-                @*<li>
-                        <img="@Model.product.ImageUrl">
-                    </li>*@
+                <li>
+                        <img src="@Model.product.ImageUrl">
+                    </li>
             </ul>
             @if (SignInManager.IsSignedIn(User))
             {
-                <form action="add" method="post">
+                <form method="post">
                     <label asp-for="AddData.Qty">Quantity</label>
-                    <input asp-for="AddData.Qty" type="number" placeholder="1" />
+                    <input asp-for="AddData.Qty" type="number" />
 
                     <input asp-for="AddData.ProductID" type="hidden" value="@Model.product.ID" />
 

@@ -40,15 +40,22 @@ namespace ECommerceLabWebApp.Models.Services
         /// <returns>The cartItems object</returns>
         public async Task<CartItems> GetCartItemsByIdAsync(int id) => await _context.CartItems.FindAsync(id);
 
-
         /// <summary>
         /// Gets a list of all cartItems in a given cart from database
         /// </summary>
         /// <returns>A list of all cartItems in the given cart</returns>
         public async Task<List<CartItems>> GetCartItemsByOwnerAsync(string owner)
         {
-            int cartId = await _cart.GetCartIdByOwner(owner);
-            return await _context.CartItems.Where(x => x.CartID == cartId).ToListAsync();
+            List<CartItems> items = await _context.CartItems.Where(x => x.CartID == owner).ToListAsync();
+
+            return items;
+        }
+
+        public async Task<CartItems> GetSingleCartItemsByOwnerAsync(string owner, int productId)
+        {
+            CartItems item = await _context.CartItems.Where(x => x.CartID == owner && x.ProductID == productId);
+
+            return item;
         }
 
         /// <summary>

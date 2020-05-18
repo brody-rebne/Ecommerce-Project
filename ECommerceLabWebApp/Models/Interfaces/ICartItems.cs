@@ -13,6 +13,7 @@ namespace ECommerceLabWebApp.Models.Interfaces
         //Read
         Task<CartItems> GetCartItemsByIdAsync(int id);
         Task<List<CartItems>> GetCartItemsByOwnerAsync(string owner);
+        Task<CartItems> GetSingleCartItemsByOwnerAsync(string owner, int productId);
 
         //Update
         Task UpdateCartItemsAsync(CartItems cartItems);

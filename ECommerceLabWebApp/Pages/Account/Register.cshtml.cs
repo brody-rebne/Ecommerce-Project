@@ -77,7 +77,7 @@ namespace ECommerceLabWebApp.Pages.Account
                     //add all claims at once to the user
                     await _userManager.AddClaimsAsync(user, claims);
 
-                    //creating a cart for the user, keyed off of their email
+                    //creating a cart for the user, keyed off of their username
                     Cart userCart = new Cart()
                     {
                         Owner = user.UserName

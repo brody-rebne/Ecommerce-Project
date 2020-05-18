@@ -15,4 +15,10 @@ namespace ECommerceLabWebApp.Models
         public string LastName { get; set; }
         public DateTime Birthdate { get; set; }
     }
+
+    public static class ApplicationRoles
+    {
+        public const string Admin = "Admin";
+        public const string Member = "Member";
+    }
 }
